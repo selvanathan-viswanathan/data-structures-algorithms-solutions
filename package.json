@@ -1,0 +1,38 @@
+{
+  "name": "dsa-coding-solutions-decoded",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint:fix": "eslint . --ext ts --fix",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0 && prettier --write",
+    "prettier": "prettier . --write",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix --max-warnings=0"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/node": "^20.11.2",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^8.0.2",
+    "jiti": "^2.5.1",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.40.0",
+    "vite": "^7.1.2"
+  }
+}
